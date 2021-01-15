@@ -1,0 +1,92 @@
+.meeting
+  display flex
+  padding 2rem 2.5rem
+  cursor default
+  align-items center
+  justify-content space-between
+  font-size 2rem
+  &__left
+    display flex
+  
+  &__center
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+
+  &__right
+    display flex
+    align-items center
+    justify-content center
+    position relative
+
+  &__index
+    font-weight bold
+    margin-right 1rem
+
+  &__duration
+    font-size 1.8rem
+    position absolute
+    top 50%
+    right 0
+    height 100%
+    background #fff
+    z-index 2
+    transition all .2s ease-out
+    transform translate(0, -50%)
+    &--hovered
+      transform translate(-150%, -50%)
+      background transparent
+    
+  &__time
+    font-size 1.8rem
+
+  &__fromnow
+    font-size 1rem
+
+  &__controls
+    display flex
+    align-items center
+    justify-content space-between
+    padding-left 1rem
+    &__btn
+      padding .5rem
+      border-radius .5rem
+      transition all .2s ease-out
+      cursor pointer
+      &:last-child
+        margin-left 1rem
+      &:hover
+        background #eee
+
+  &__filter
+    background-color #eee
+    height 5rem
+    &--active
+      background-color #fff
+      border-top-right-radius 1rem
+      border-top-left-radius 1rem
+    padding 1rem 2rem
+    display flex
+    align-items center
+    justify-content center
+    font-size 1.6rem
+    font-weight bold
+    &:last-child
+      border-top-right-radius 1rem
+
+@keyframes fadeIn
+  from
+    opacity 0
+    transform translateX(1rem)
+  to 
+    opacity 1
+    transform 0
+
+@keyframes fadeOut
+  from
+    opacity 1
+    transform 0
+  to 
+    opacity 0
+    transform translateX(1rem)
